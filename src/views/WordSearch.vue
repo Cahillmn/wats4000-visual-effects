@@ -123,7 +123,7 @@ export default {
         params: {
           ml: this.phrase,
           sl: this.soundsLike,
-          sp: `${this.startLetter}*${this.endLetter}`
+          sp: this.startLetter === '' && this.endLetter ==='' ? '' : `${this.startLetter}*${this.endLetter}`
         }
       })
       .then( response => {
